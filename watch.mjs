@@ -145,7 +145,7 @@ async function sendEmail(posts) {
     posts
       .map((p) => `<li><a href="${p.link}">${escapeHtml(p.title)}</a></li>`)
       .join("") +
-    `</ul><p style="color:#888">Error fares often vanish within hours — book fast, hold off on non-refundable hotels until the ticket is confirmed.</p>`;
+    `</ul>`;
 
   const res = await fetch("https://api.resend.com/emails", {
     method: "POST",
